@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 
 import com.rommansabbir.databindingrecyclerviewexample.BR;
 import com.rommansabbir.databindingrecyclerviewexample.R;
+import com.rommansabbir.databindingrecyclerviewexample.activities.viewhandler.RecyclerViewItemHandler;
 import com.rommansabbir.databindingrecyclerviewexample.model.AccidentModel;
 
 import java.util.List;
@@ -59,6 +60,14 @@ public class AccidentRecyclerViewAdapter extends RecyclerView.Adapter<AccidentRe
          * Variable, which variable has been set to the layout to access the data though model
          */
         accidentViewHolder.binding.setVariable(BR.accidentInfo, accidentModel);
+
+        /**
+         * Set variable to the view holder
+         * Variable, which will handle the event action
+         */
+        accidentViewHolder.binding.setVariable(BR.eventHandler, new RecyclerViewItemHandler(context, accidentModel));
+
+
     }
 
 

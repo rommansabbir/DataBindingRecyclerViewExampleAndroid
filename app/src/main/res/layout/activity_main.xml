@@ -4,6 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".activities.UI.MainActivity">
 
+    <data>
+        <variable
+            name="buttonAction"
+            type="com.rommansabbir.databindingrecyclerviewexample.activities.viewhandler.RecyclerViewItemHandler">
+
+        </variable>
+        <variable
+            name="view"
+            type="android.view.View"/>
+    </data>
+
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -16,5 +27,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
     </android.support.constraint.ConstraintLayout>
 </layout>
